@@ -1,3 +1,4 @@
+
 ssh-keygen -t rsa -b 4096 -C "einardavidvillarroel@gmail.com"
 
  cd /d
@@ -12,7 +13,7 @@ ssh-keygen -t rsa -b 4096 -C "einardavidvillarroel@gmail.com"
    
    git add . //ruta
    
-   git commit -a //confirmar y darle nombre a la subida
+   git commit -am "Comentario" //confirmar y darle nombre a la subida
    
    git push origin master(*donde vas a subir*) //subir los archivos
    
