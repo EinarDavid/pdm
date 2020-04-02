@@ -1,11 +1,11 @@
 
 
 import React from 'react';
-import LoginScreen from './src/View/Login/LoginScreen'
+import CVScreen from './src/View/CVScreen';
 
 const App: () => React$Node = () => {
   return (
-    <LoginScreen></LoginScreen>
+    <CVScreen></CVScreen>
   );
 };
 export default App;

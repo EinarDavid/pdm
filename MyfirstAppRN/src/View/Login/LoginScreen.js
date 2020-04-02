@@ -28,6 +28,7 @@ export default class LoginScreen extends Component {
         console.log('button preset..!!!');
         console.log(this.state.username);
         console.log(this.state.password);
+        
     }
     _onChangeTextUsername(username) {
         this.setState({ username: username })
@@ -43,7 +44,7 @@ export default class LoginScreen extends Component {
                     <TextInputLogin
                         onChangeText={this._onChangeTextUsername}
                         source={imgUsername}
-                        placeholder={Constans.USER}
+                        placeholder={Constans.USER} 
                         secureTextEntry={false}
                         autoCorrect={false}>
                     </TextInputLogin>
