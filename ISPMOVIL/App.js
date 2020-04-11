@@ -1,93 +1,56 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, { Component } from 'react';
+//import 'react-native-gesture-handler';
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+//import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+//import { mapping, light as theme } from '@eva-design/eva';
+import AppNavigator from './src/Vista/Components/Navigation/navigation.component';
 
-//import{Colors} from 'react-native/Libraries/NewAppScreen';
-import MyComponent from'./src/test/MyComponent';
-import Logo from './src/login/logo';
-import Input from './src/login/input';
-import Boton from './src/login/button';
-import imgPassword from './src/images/pass.png';
-import imgUser from './src/images/username.png';
-import Constans from './src/login/constans';
 
-const PASS='123';
-const USER='user1';
-const NUM1 =4;
-const NUM2 = 2;
+import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { mapping, light as lightTheme } from '@eva-design/eva';
+
+import LoginScreen from './src/Vista/View/Login/LoginScreen';
+import MenuScreen from './src/Vista/View/Menu/MenuScreen';
+import RegistroUsScreen from './src/Vista/View/Formularios/Registro_Usuario';
+import RegistroBauScreen from './src/Vista/View/Formularios/Registro_Bautizo';
+import RegistroTransScreen from './src/Vista/View/Formularios/Registro_Transferencias';
+import RegistroNiScreen from './src/Vista/View/Formularios/Registro_Niños';
+
+const HomeScreen = () => (
+  <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <Text category='h1'>HOME</Text>
+  </Layout>
+);
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <View style={styles.body}>
-      <View style={styles.container}>
-      
-      <Logo style={styles.box}></Logo>
-      
-     
-      <Input
-      source={imgUser}
-      placeholder={Constans.USER}
-      secureTextEntry={false}
-      autoCorrect={false}
-      onChangeText={USER => this.setState({USER})}
-      //onChangeText={NUM1 => this.setState({NUM1})}
-      />
-      <Input
-      source={imgPassword}
-      placeholder={Constans.PASS}
-      secureTextEntry={true}
-      autoCorrect={false}
-      onChangeText={PASS => this.setState({PASS})}
-      //onChangeText={NUM2 => this.setState({NUM2})}
-      />
-      <Boton pass={PASS} username={USER}
-      num1={NUM1} num2={NUM2}></Boton>
-      </View>
-      
-    </View>
-    </>
+    
+    <ApplicationProvider mapping={mapping} theme={lightTheme}>
+    <LoginScreen></LoginScreen>
+  </ApplicationProvider>
+    //<RegistroBauScreen></RegistroBauScreen>
+    //<RegistroUsScreen></RegistroUsScreen>
+    //<MenuScreen></MenuScreen>
+    //<RegistroTransScreen></RegistroTransScreen>
+    //<HomeScreen />
+    //<RegistroNiScreen></RegistroNiScreen>
   );
 };
-
-const styles = StyleSheet.create({
-  body:{
-    flex:1,
-    flexDirection:'column',
-    backgroundColor: '#000',
-    //require('./src/images/administracion.png'),
-  
-  },
-  container:{
-    flex: .5,
-    flexDirection:'column',
-    alignItems:'center',
-  },
-  box:{
-    height:100
-  },
-});
-
 export default App;
+
+/*
+
+//
+//
+
+
+
+<React.Fragment>
+      <IconRegistry icons={EvaIconsPack} />
+      <ApplicationProvider mapping={mapping} theme={theme}>
+        <AppNavigator />
+      </ApplicationProvider>
+    </React.Fragment>
+*/
