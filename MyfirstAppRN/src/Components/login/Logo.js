@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, Text, Image, TouchableWithoutFeedback } from 'react-native';
-import imgLogo from '../../images/Logo.png'
+
+import Images from '../../Config/images';
 
 export default class Logo extends Component {
   constructor(props)
@@ -15,8 +16,8 @@ export default class Logo extends Component {
     };*/
     return (
       <View style={styles.container}>
-        <Image source={imgLogo} style={styles.image}></Image>
-        <Text style={styles.text}> UCE</Text>
+        <Image source={Images.LOGO} style={styles.image}></Image>
+        <Text style={styles.text}> UCE ISP</Text>
         
       </View>
     );

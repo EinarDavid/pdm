@@ -5,9 +5,7 @@ import ButtonLogin from '../../Components/login/Button';
 import TextInputLogin from '../../Components/login/TextInput';
 import LogoLogin from '../../Components/login/Logo';
 
-import imgUsername from '../../images/username.png';
-import imgPassword from '../../images/pass.png';
-
+import Images from '../../Config/images';
 import Constans from '../../Config/Constans';
 import Colors from '../../Config/Colors';
 
@@ -43,21 +41,21 @@ export default class LoginScreen extends Component {
                 <View style={stylesLoginScreen.form}>
                     <TextInputLogin
                         onChangeText={this._onChangeTextUsername}
-                        source={imgUsername}
-                        placeholder={Constans.USER} 
+                        source={Images.USERNAME}
+                        placeholder={Constans.STRING.USER} 
                         secureTextEntry={false}
                         autoCorrect={false}>
                     </TextInputLogin>
                     <TextInputLogin
                         onChangeText={this._onChangeTextPassword}
-                        source={imgPassword}
-                        placeholder={Constans.PASS}
+                        source={Images.PASSWORD}
+                        placeholder={Constans.STRING.PASS}
                         secureTextEntry={true}
                         autoCorrect={false}>
                     </TextInputLogin>
                     <ButtonLogin
                         onPress={this._onPress}
-                        titleButton={Constans.TITLE_BUTTON}>
+                        titleButton={Constans.STRING.TITLE_BUTTON}>
                     </ButtonLogin>
                 </View>
             </View>
@@ -68,7 +66,7 @@ export default class LoginScreen extends Component {
 const stylesLoginScreen = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.dark,
         alignItems: 'center',
         justifyContent: 'space-between',
     },

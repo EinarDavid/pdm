@@ -1,5 +1,5 @@
 export default {
-    primary: '#1292B4',
+  primary: '#1292B4',
   white: '#FFF',
   lighter: '#F3F3F3',
   light: '#DAE1E7',
@@ -8,6 +8,10 @@ export default {
   customColor: '#F035E0',
   red: '#F8262F',
   blue: '#428AF8',
-  silver: '#BEBEBE'
+  silver: '#BEBEBE',
+  black2: '#101010',
+  white2: '#ebebeb',
+  appPrimary: '#4DCA77',
+
 
 }
