@@ -10,6 +10,7 @@ const strings = {
     PASS: "Password",
     USER: "User Name",
     TITLE_BUTTON: "Login",
+    EMAIL: "Email",
 }
 export default {
 CONFIG: config,

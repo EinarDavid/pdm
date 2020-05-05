@@ -1,0 +1,112 @@
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ pwd
+/d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git add .
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   helloworld.txt
+
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git commit -a
+[master 3194414] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 helloworld.txt
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/SpartanCat7/PDM-Hito2.git
+   2729098..3194414  master -> master
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git add .
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git commit
+[master 65c0902] Second Commit
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Introduccion/helloworld.java
+ rename helloworld.txt => Introduccion/helloworld.txt (100%)
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 388 bytes | 388.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/SpartanCat7/PDM-Hito2.git
+   3194414..65c0902  master -> master
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ ^C
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (master)
+$ git checkout -b hito2
+Switched to a new branch 'hito2'
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (hito2)
+$ git branch -a
+* hito2
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (hito2)
+$ git commit
+On branch hito2
+Untracked files:
+        Introduccion/consolaClase.txt
+
+nothing added to commit but untracked files present
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (hito2)
+$ git push
+fatal: The current branch hito2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin hito2
+
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (hito2)
+$ git push origin hito2
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'hito2' on GitHub by visiting:
+remote:      https://github.com/SpartanCat7/PDM-Hito2/pull/new/hito2
+remote:
+To https://github.com/SpartanCat7/PDM-Hito2.git
+ * [new branch]      hito2 -> hito2
+
+SpartanCat7@SC7-LenovoB50 MINGW64 /d/Universidad/Semestre-7/PDM - Programacion de Dispositivos Moviles/PDM-Hito2 (hito2)
+$
