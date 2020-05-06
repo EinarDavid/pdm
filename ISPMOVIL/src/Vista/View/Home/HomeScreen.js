@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Input, Layout, Text } from '@ui-kitten/components';
 import { View, Text,StyleSheet } from 'react-native';
 import Colors from '../../Config/Colors';
 
