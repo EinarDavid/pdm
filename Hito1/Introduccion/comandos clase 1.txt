@@ -1,0 +1,286 @@
+git
+ssh-keygen -t rsa -b 4096 -C "einardavidvillarroel@gmail.com"
+
+ cd /d
+ 
+  git clone https://github.com/EinarDavid/pdm.git
+  
+   cd pdm
+   
+   git status
+   o 
+   git st
+   
+   git add . //ruta
+   
+   git commit -am "Comentario" //confirmar y darle nombre a la subida
+   
+   git push origin master(*donde vas a subir*) //subir los archivos
+   
+    
+   
+   
+   
+   
+CC1@CC1-PC02 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C "einardavidvillarroel@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/CC1/.ssh/id_rsa):
+Created directory '/c/Users/CC1/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/CC1/.ssh/id_rsa.
+Your public key has been saved in /c/Users/CC1/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:/IFGkhnsfQIDI6auuoFHXzasxEo1cncR5eZEWlhNvqk einardavidvillarroel@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|  o oo. o==o.    |
+| o . .++.* ..    |
+|. . +.=++ + .    |
+|.  = +.=o=.  o   |
+| .o o = Soo o    |
+|oo + + o . o     |
+|+ o o     E      |
+|.o               |
+|o.               |
++----[SHA256]-----+
+
+CC1@CC1-PC02 MINGW64 ~
+$ cd / d
+bash: cd: too many arguments
+
+CC1@CC1-PC02 MINGW64 ~
+$ cd/d
+bash: cd/d: No such file or directory
+
+CC1@CC1-PC02 MINGW64 ~
+$ cd /d
+
+CC1@CC1-PC02 MINGW64 /d
+$ git clone https://github.com/EinarDavid/pdm.git
+Cloning into 'pdm'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.30 KiB | 10.00 KiB/s, done.
+
+CC1@CC1-PC02 MINGW64 /d
+$ ls
+'$RECYCLE.BIN'/                                             'estructura datos'/
+ 17704-Happy-Birthday-Slideshow/                             Farmacia2017/
+ 2puntosuve.xlsx                                            'Foxes   Youth.mp4'
+ apli/                                                      'franklin rodriguez madloando.do
+ bbf62ccac6cba8ea62ba0360/                                  'gabriel moral carballo'/
+'CISCO PacketTracer6_3 2016'/                                gds/
+ CMapTools_64.exe*                                          'LA EVOLUCIÓN DE LOS SISTEMAS OP
+'Coldplay   Atlas (Hunger Games Catching Fire)(Lyric).mp4'   Libro1.xlsx
+ EjemploConexion/                                           'MOHAA by yoel24'/
+'ejercicio 1.docx'                                           owen/
+
+CC1@CC1-PC02 MINGW64 /d
+$ cd pdm
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Introduccion/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git add .
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Introduccion/holamundo.txt
+
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'CC1@CC1-PC02.(none)')
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git config --global user.email "you@example.com"
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git config --global user.email "you@example.com"
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$  git config --global user.email "einardavidvillarroel@gmail.com"
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git config --global user.name "Einar David"
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+[master 0b116a8] Mi primer Commit!!!
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Introduccion/holamundo.txt
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 391 bytes | 391.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/EinarDavid/pdm.git
+   86c3d3e..0b116a8  master -> master
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        Introduccion/holamundo.js
+
+nothing added to commit but untracked files present
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        Introduccion/holamundo.js
+
+nothing added to commit but untracked files present
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git add .
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+hint: Waiting for your editor to close the file...       0 [sig] bash 1823! sigpacket::process: Suppressing signal 18 to win32 process (pid 4768)
+3459813 [sig] bash 1823! sigpacket::process: Suppressing signal 18 to win32 process (pid 4768)
+Aborting commit due to empty commit message.
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git add .
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+[master c7c9d73] Commit 2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Introduccion/holamundo.js
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git push origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 412 bytes | 412.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/EinarDavid/pdm.git
+   0b116a8..c7c9d73  master -> master
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git commit -a
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git config --global alias.st status
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git checkout -b hito2
+Switched to a new branch 'hito2'
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ git branch -a
+* hito2
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+CC1@CC1-PC02 MINGW64 /d/pdm (master)
+$ git checkout hito2
+Switched to branch 'hito2'
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ git commit -a
+On branch hito2
+nothing to commit, working tree clean
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ git push origin hito2
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'hito2' on GitHub by visiting:
+remote:      https://github.com/EinarDavid/pdm/pull/new/hito2
+remote:
+To https://github.com/EinarDavid/pdm.git
+ * [new branch]      hito2 -> hito2
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$ ^C
+
+CC1@CC1-PC02 MINGW64 /d/pdm (hito2)
+$

@@ -11,7 +11,6 @@ const ScreenPMD = ({ source, Titulo, Contenido }) => {
             </View>
             <View style={styles.container}>
                 <Text style={styles.TextTitulo} category='h1'>{Titulo}</Text>
-
                 <Text style={styles.TextContenido} category='h6'>{Contenido}</Text>
             </View>
         </View>
