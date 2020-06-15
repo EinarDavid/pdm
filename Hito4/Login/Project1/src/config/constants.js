@@ -16,7 +16,7 @@ const strings = {
     EMAILERROR: 'Email Incorrecto..!!',
     PASSERROR: 'Password Invalido',
     EMPTY_TITLE: 'Review Email/Password values',
-  EMPTY_VALUES: 'Empty values detected',
+    EMPTY_VALUES: 'Empty values detected',
   REGISTER: 'Register',
 }
 

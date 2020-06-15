@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }) => {
         let isValidEmail = Utils.isValidEmail(email);
         isValidEmail
             ? setErrorEmail('')
-            : setErrorEmail(Constants.STRING.EMAILERROR);
+            : setErrorEmail(constants.STRINGS.EMAILERROR);
         return isValidEmail;
     };
 
@@ -32,7 +32,7 @@ const LoginScreen = ({ navigation }) => {
         let isValidPassword = Utils.isValidField(password);
         isValidPassword
             ? setErrorPassword('')
-            : setErrorPassword(Constants.STRING.PASSERROR);
+            : setErrorPassword(constants.STRINGS.PASSERROR);
         return isValidPassword;
     };
 
@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
         if (emailData && passwordData) {
             loginApp(email, password);
         } else {
-            Alert.alert(Constants.STRING.EMPTY_TITLE, Constants.STRING.EMPTY_VALUES);
+            Alert.alert(constants.STRINGS.EMPTY_TITLE, constants.STRINGS.EMPTY_VALUES);
         }
     };
     const loginApp = (email, password) => {
@@ -53,14 +53,14 @@ const LoginScreen = ({ navigation }) => {
                 .signInWithEmailAndPassword(email, password)
                 .then(user => {
                     setIsLoading(false);
-                    navigation.navigate('Register');
+                    navigation.navigate('App');
                 })
                 .catch(error => {
                     FirebasePlugin.auth()
                         .createUserWithEmailAndPassword(email, password)
                         .then(user => {
                             setIsLoading(false);
-                            navigation.navigate('Register');
+                            navigation.navigate('App');
                         })
                         .catch(error => {
                             setIsLoading(false);

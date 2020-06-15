@@ -13,5 +13,5 @@ export default {
   white2: '#ebebeb',
   appPrimary: '#4DCA77',
   dark2: '#152238',
-
+  Orange: '#000'
 }

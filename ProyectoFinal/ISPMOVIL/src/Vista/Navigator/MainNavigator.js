@@ -5,9 +5,48 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import NavegacionDesplegable from "../View/Menu/MenuDesplegableScreen";
-
+import Home from '../View/Home/HomeScreen';
 
 const Stack = createStackNavigator();
+const StackScreen = () =>{
+  return(
+    <Stack.Navigator>
+      <Stack.Screen
+      name="Home"
+      component= {Home}
+      options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+}
+const Drawer = new createDrawerNavigator();
+const DrawerScreen= ()=>{
+  return(
+  <Drawer.Navigator>
+    <Drawer.Screen
+    name='App'
+    component={NavegacionDesplegable}
+    options={{title:'App Main'}}
+    />
+    
+  </Drawer.Navigator>
+  );
+}
+const mainNavigator = () =>{
+  const [isLogged, setIsLogged] = React.useState(null);
+  return(
+    <NavigationContainer>
+      {isLogged !== null
+      ? (<StackScreen/>) : (<DrawerScreen/>)
+      }
+    </NavigationContainer>
+  );
+}
+export default mainNavigator;
+
+
+/*
+
 export default class NavegacionPrincipal extends Component {
   render() {
     return (
@@ -28,10 +67,6 @@ export default class NavegacionPrincipal extends Component {
     );
   }
 }
-
-/*
-
-
 
 
 import * as React from 'react';

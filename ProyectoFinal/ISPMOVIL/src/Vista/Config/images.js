@@ -11,5 +11,12 @@ export default {
     NUMERO: require ('../../../assets/numero.png'),
     PROFESION: require ('../../../assets/profesion.png'),
     IGLESIA: require ('../../../assets/iglesia.png'),
+
+    FONDO1: require ('../../../assets/img1.png'),
+    FONDO2: require ('../../../assets/img2.png'),
+    FONDO3: require ('../../../assets/img3.png'),
+    IMGFONDO1: require('../../../assets/CruzAmarrillo.png'),
+    IMGFONDO2: require('../../../assets/CruzEsmeralda.jpg'),
+    IMGFONDO3: require('../../../assets/CruzAzul.jpg'),
     
 }

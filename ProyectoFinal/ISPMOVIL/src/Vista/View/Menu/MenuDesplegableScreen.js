@@ -8,6 +8,9 @@ import FormTransScreem from '../FormularioNew/FormRegTransScreen';
 import FormRegUsScreem from '../FormularioNew/FormRegUs';
 //import NavegacionPilaPrueba from "./NavegacionPilaPrueba";
 //import NavegacionAbajo from "./NavegacionAbajo";
+import AboutScreem from '../Onboarding/AboutScreen';
+import TaskScreen from '../Onboarding/TaskScreen';
+import WelcomeScreen from '../Onboarding/WelcomeScreen'; 
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -18,11 +21,15 @@ const Drawer = createDrawerNavigator();
 function NavegacionPrincipal(){
     return (
       <Drawer.Navigator>
-       <Drawer.Screen name="Home" component={HomeScreem} />
+       
        <Drawer.Screen name="Registro por Bautizo" component={FormBauScreem} />
        <Drawer.Screen name="Registro por Solicitud" component={FormSolScreem} />
        <Drawer.Screen name="Registro por Transferencia" component={FormTransScreem} />
        <Drawer.Screen name="Registro de Usuarios" component={FormRegUsScreem} />
+
+       <Drawer.Screen name="Welcome Screen" component={WelcomeScreen}/>
+       <Drawer.Screen name="TaskScreem" component={TaskScreen} />
+       <Drawer.Screen name="AboutScreen" component={AboutScreem} />
 
       </Drawer.Navigator>
       );
