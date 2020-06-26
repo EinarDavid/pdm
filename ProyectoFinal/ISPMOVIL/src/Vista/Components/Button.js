@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, View, TouchableOpacity,Text } from 'react-native';
 //import { Button, Layout } from '@ui-kitten/components';
 import Colors from '../Config/Colors';
-const ButtonInput = () => {
+const ButtonInput = ({onPress}) => {
   return (
     <View style={styles.container} level='1'>
 
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} onPress={onPress} >
         <Text
           style={styles.text}>{'Enviar'}
         </Text>

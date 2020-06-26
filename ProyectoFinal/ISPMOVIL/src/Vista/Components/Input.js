@@ -6,7 +6,7 @@ import Colors from '../Config/Colors';
 import Constants from '../Config/Constans';
 
 
-const TextInputForm = ({ source, onChangeText, secureTextEntry, autoCorrect, placeholder }) => {
+const TextInputForm = ({ source, onChangeText, secureTextEntry, autoCorrect, placeholder, value }) => {
     return (
         <View >
             <Image
@@ -17,6 +17,7 @@ const TextInputForm = ({ source, onChangeText, secureTextEntry, autoCorrect, pla
                     onChangeText={onChangeText}
                     style={styles.input}
                     placeholder={placeholder}
+                    defaultValue={value}
                     secureTextEntry={secureTextEntry}
                     autoCorrect={autoCorrect}
                     placeholderTextColor={Colors.white}

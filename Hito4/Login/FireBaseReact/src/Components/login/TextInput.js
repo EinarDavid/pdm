@@ -43,9 +43,9 @@ const stylesTextInput = StyleSheet.create({
   textInput: {
     height: Constants.CONFIG.HEADER_HEIGHT * 0.06,
     width: Constants.CONFIG.SCREEN_WIDTH * 0.85,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
     alignItems: 'center',
-    color: Colors.white,
+    color: Colors.black,
     paddingLeft: 40,
     borderRadius: 10,
     borderWidth: 1,

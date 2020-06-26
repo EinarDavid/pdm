@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, Text, Image, TouchableWithoutFeedback } from 'react-native';
-import imgLogo from '../../images/Logo.png'
+import {StyleSheet, View, Text, Image } from 'react-native';
 
+
+import Images from '../../Config/images';
 export default class Logo extends Component {
   constructor(props)
   {
@@ -15,8 +16,8 @@ export default class Logo extends Component {
     };*/
     return (
       <View style={styles.container}>
-        <Image source={imgLogo} style={styles.image}></Image>
-        <Text style={styles.text}> UCE</Text>
+        <Image source={Images.LOGO} style={styles.image}></Image>
+        <Text style={styles.text}> Login</Text>
         
       </View>
     );
@@ -29,13 +30,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     image:{
-        width:120,
-        height:120,
+        width:250,
+        height:250,
     },
     text:{
         color:'white',
         fontWeight:'bold',
         backgroundColor:'transparent',
-        marginTop:20,
+        
+        fontSize: 25,
     },
 });

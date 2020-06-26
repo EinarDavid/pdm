@@ -8,15 +8,16 @@ import Colors from '../../Config/Colors';
 import Onboarding from '../../Components/Onboarding/OnboardingFactory';
 
 const FormRegScreen = ({ navigation }) => {
+    console.disableYellowBox = true;
     return (
         <ImageBackground source={Images.IMGFONDO2} style={{ width: '100%', height: '100%' }}>
         <View style={styles.container}>
             <Onboarding
             //source={Images.FONDO2}
-            Titulo={Constants.STRING.TITULO2}
-            Contenido={Constants.STRING.CONTENIDO2}
-            onPressPrev={()=>{}}
-            onPressNext={()=>{}}
+            Titulo={Constants.STRING.TITULO3}
+            Contenido={Constants.STRING.CONTENIDO3}
+            onPressPrev={()=>{navigation.navigate('Welcome');}}
+            onPressNext={()=>{navigation.navigate('Login')}}
             ></Onboarding>
         </View>
         </ImageBackground>

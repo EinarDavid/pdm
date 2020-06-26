@@ -5,7 +5,7 @@ import Colors from '../../Config/Colors';
 
 const ScreenPMD = ({ source, Titulo, Contenido }) => {
     return (
-        <View >
+        <View style={styles.containerGen}>
             <View style={styles.ContainerImg}>
                 <Image source={source} style={styles.Image} />
             </View>
@@ -18,6 +18,9 @@ const ScreenPMD = ({ source, Titulo, Contenido }) => {
 }
 
 const styles = StyleSheet.create({
+    containerGen: {
+        marginTop:80,
+    },
     container: {
         alignItems: 'center',
         justifyContent: 'center',

@@ -2,27 +2,19 @@ import React, {useLayoutEffect, useState, useEffect} from 'react';
 import {StyleSheet, Text, View, Alert} from 'react-native';
 
 import ButtonIcon from '../../Components/ButtonIcon';
-import FirebasePlugin from '../../Plugins/firebase/Firebase';
+//import FirebasePlugin from '../../Plugins/firebase/Firebase';
 
 import Colors from '../../Config/Colors';
-import Images from '../../Config/Images';
+import Images from '../../Config/images';
 
 const AppScreen = ({navigation}) => {
+  console.disableYellowBox = true;
   const onPressSetting = () => {
-    navigation.navigate('Setting');
+    navigation.navigate('MenuUsuario');
   };
 
-  const onPressLogout = () => { 
-    try {
-      FirebasePlugin.auth().signOut()
-        .then(() => {
-            Alert.alert('Logout App', 'Successfully Logout', [{
-              text: 'Login App', onPress: () => {navigation.navigate('Login')}
-            }]);
-        });
-    } catch (e) {
-      Alert.alert('Contact admin', e.message);
-    }
+  const onPressLogout = () => {
+    navigation.navigate('Login')
   };
 
   useLayoutEffect(() => {

@@ -18,8 +18,9 @@ import Utils from '../../utils/utils';
 import Images from '../../Config/Images';
 import Constants from '../../Config/Constants';
 import Colors from '../../Config/Colors';
+import { BaseRouter } from '@react-navigation/native';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation, route }) => {
   const [email, setEmail] = useState('');
   const [errorEmail, setErrorEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -82,19 +83,13 @@ const LoginScreen = ({ navigation }) => {
         .signInWithEmailAndPassword(email, password)
         .then((user) => {
           setIsLoading(false);
-          navigation.navigate('App');
+          route.params.route.params.setIsLogged(true);
+          //navigation.navigate('App');
         })
         .catch((error) => {
-          FirebasePlugin.auth()
-            .createUserWithEmailAndPassword(email, password)
-            .then((user) => {
-              setIsLoading(false);
-              navigation.navigate('App');
-            })
-            .catch((error) => {
-              setIsLoading(false);
+          setIsLoading(false);
               Alert.alert('Invalid Values', error.message);
-            });
+            
         });
     } catch (error) {
       setIsLoading(true);

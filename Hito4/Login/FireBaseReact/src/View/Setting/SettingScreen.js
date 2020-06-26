@@ -1,69 +1,68 @@
-import React, {useState, useEffect} from 'react';
-import {StyleSheet, View, Alert} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Alert } from 'react-native';
 
 import CTextField from '../../Components/CTextField';
 import Button from '../../Components/login/Button';
-import FirebasePlugin, {firestore} from '../../Plugins/firebase/Firebase';
+import FirebasePlugin, { firestore } from '../../Plugins/firebase/Firebase';
+import TextInput from '../../Components/login/TextInput';
 
 import Constants from '../../Config/Constants';
 import Utils from '../../utils/utils';
+import Images from '../../Config/Images';
 
 const SettingScreen = () => {
   const [emailName, setEmailName] = useState('');
+  
+  const [react, setReact] = useState('');
+  const [react_native, setReactNative] = useState('');
+  const [nameApp, setNameApp] = useState('');
+
   const [errorEmailName, setErrorEmailName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const validateCTextField = () => {
-    let isValidField = Utils.isValidField(emailName);
-    isValidField ?
-      setErrorEmailName('') :
-      setErrorEmailName(Constants.STRING.ENTER_EMAIL);
-    return isValidField;
-  };
+  
 
   const onPressAdd = () => {
-    let isValid = validateCTextField();
-    if (isValid) {
       addEmailRowToFirebase();
-    } else {
-      Alert.alert(Constants.STRING.REVIEW_EMAIL);
-    }
+
   }
-const addGroupEmails = (emailID, userID) => {
-  const emailsAddedRef = firestore
-    .collection('groupEmails').doc(userID)
-    .collection('email').doc('EMAILS_ADDED');
+  const addGroupEmails = (emailID, userID) => {
+    const emailsAddedRef = firestore
+      .collection('emails').doc(userID);
+ 
 
     emailsAddedRef.set({
       userID: userID,
     })
       .then(function () {
         setIsLoading(false);
-        
         Alert.alert('USER ID:', emailsAddedRef.id);
       })
+
       .catch(function (error) {
         Alert.alert('Error al crear', error.message);
         setIsLoading(false);
       });
 
-}
+  }
   const addEmailRowToFirebase = () => {
     setIsLoading(true);
 
     const emailRef = firestore
-      .collection('emails').doc();
+    .collection('EINAR_DAVID_COLLECTIONS').doc('GITHUB_APPS')
+    .collection(react).doc(react_native);
+
     const userID = FirebasePlugin.auth().currentUser.uid;
 
     emailRef.set({
-      emailID: emailRef.id,
-      emailName: emailName,
+      appID: emailRef.id,
+      nameApp: nameApp,
       userID: userID,
     })
       .then(function () {
         setIsLoading(false);
-        addGroupEmails(emailRef.id, userID);
-        Alert.alert('Email creado:', emailRef.id);
+        //addGroupEmails(emailRef.id, userID);
+        Alert.alert('Coleccion creada:', emailRef.id);
       })
       .catch(function (error) {
         Alert.alert('Error al crear', error.message);
@@ -73,20 +72,39 @@ const addGroupEmails = (emailID, userID) => {
 
   return (
     <View style={styles.container}>
-      <CTextField
-        value={emailName}
-        autoCorrect={false}
-        placeholder={Constants.STRING.ADD_EMAIL}
-        error={errorEmailName}
-        onChange={(newEmailName) => {
-          setEmailName(newEmailName);
+      <TextInput
+        onChangeText={(newreact) => {
+          setReact(newreact);
         }}
-        onValidate={validateCTextField}
+        source={Images.USERNAME}
+        placeholder={Constants.STRING.REGISTER}
+        secureTextEntry={false}
+        autoCorrect={false}
       />
+      <TextInput
+        onChangeText={(newnative) => {
+          setReactNative(newnative);
+        }}
+        source={Images.USERNAME}
+        placeholder={Constants.STRING.REGISTER}
+        secureTextEntry={false}
+        autoCorrect={false}
+      />
+      <TextInput
+        onChangeText={(nameapp) => {
+          setNameApp(nameapp);
+        }}
+        source={Images.USERNAME}
+        placeholder={Constants.STRING.REGISTER}
+        secureTextEntry={false}
+        autoCorrect={false}
+      />
+
       <Button
         titleButton={Constants.STRING.ADD_EMAIL_BUTTON}
         onPress={onPressAdd}
         isLoading={isLoading}
+
       />
     </View>
   );
